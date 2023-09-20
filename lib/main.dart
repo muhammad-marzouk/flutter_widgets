@@ -5,8 +5,8 @@ import 'package:flutter_widgets/flutter_01/widget_04_banner_.dart';
 import 'package:flutter_widgets/flutter_01/widget_05_snack_bar.dart';
 import 'package:flutter_widgets/flutter_01/widget_06_snack_bar.dart';
 import 'package:flutter_widgets/flutter_01/widget_100_Slidable.dart';
-
 import 'flutter_01/widget_03_material_banner_stateless.dart';
+import 'flutter_01/widget_07_data_table.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,6 +39,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const SlidableBar();
+    return const DataTableExample();
   }
 }
