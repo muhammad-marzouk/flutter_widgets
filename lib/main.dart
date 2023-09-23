@@ -7,6 +7,7 @@ import 'package:flutter_widgets/flutter_01/widget_06_snack_bar.dart';
 import 'package:flutter_widgets/flutter_01/widget_100_Slidable.dart';
 import 'flutter_01/widget_03_material_banner_stateless.dart';
 import 'flutter_01/widget_07_data_table.dart';
+import 'flutter_01/widget_08_grid_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,6 +40,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const DataTableExample();
+    return const GridViewExample();
   }
 }
