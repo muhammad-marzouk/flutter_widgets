@@ -11,7 +11,7 @@ class GridViewExample extends StatelessWidget {
       body: Center(
         child: GridView.count(
           primary: false,
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           mainAxisSpacing: 10,
           crossAxisSpacing: 10,
           crossAxisCount:3 ,
