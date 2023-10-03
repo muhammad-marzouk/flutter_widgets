@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'flutter_01/widget_010_appbar.dart';
-import 'flutter_01/widget_100_Slidable.dart';
+import 'flutter_01/widget_011_imag.dart';
 
 void main() => runApp(const MyApp());
 
@@ -28,6 +27,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const AppBarExample();
+    return NetworkImageExample();
   }
 }

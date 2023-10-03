@@ -6,14 +6,12 @@ class AppBarExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
 
+      appBar: AppBar(
         leadingWidth: 100,
-        automaticallyImplyLeading: false,
         titleSpacing: 0.0,
-        // notificationPredicate: ,
         bottom: PreferredSize(
-            preferredSize: const Size.fromRadius(1.0),
+            preferredSize: const Size.fromHeight(1.0),
             child: Container(
               color: Colors.orange,
               height: 4.0,
@@ -40,7 +38,23 @@ class AppBarExample extends StatelessWidget {
             tooltip: 'Show Snackbar',
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('This is a snackbar')));
+                  const SnackBar(content: Text('This is a snack bar')));
+              ScaffoldMessenger.of(context).showMaterialBanner(
+                MaterialBanner(
+                  padding: const EdgeInsets.all(20),
+                  content: const Text('Hello, I am a Material Banner'),
+                  leading: const Icon(Icons.agriculture_outlined),
+                  backgroundColor: Colors.green,
+                  actions: <Widget>[
+                    TextButton(
+                      onPressed: (){
+                        ScaffoldMessenger.of(context).hideCurrentMaterialBanner();
+                      },
+                      child: const Text('DISMISS'),
+                    ),
+                  ],
+                ),
+              );
             },
           ),
           IconButton(
