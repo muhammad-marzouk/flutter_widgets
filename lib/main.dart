@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'flutter_01/widget_011_imag.dart';
+import 'flutter_01/widget_013_listview_separated.dart';
 
 void main() => runApp(const MyApp());
 
@@ -27,6 +28,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return NetworkImageExample();
+    return ListSeparatedExample3();
   }
 }

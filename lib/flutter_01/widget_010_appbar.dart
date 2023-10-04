@@ -6,16 +6,15 @@ class AppBarExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         leadingWidth: 100,
         titleSpacing: 0.0,
         bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(1.0),
-            child: Container(
-              color: Colors.orange,
-              height: 4.0,
-            ),
+          preferredSize: const Size.fromHeight(1.0),
+          child: Container(
+            color: Colors.orange,
+            height: 4.0,
+          ),
         ),
         elevation: 10.0,
         shadowColor: Colors.grey,
@@ -47,8 +46,9 @@ class AppBarExample extends StatelessWidget {
                   backgroundColor: Colors.green,
                   actions: <Widget>[
                     TextButton(
-                      onPressed: (){
-                        ScaffoldMessenger.of(context).hideCurrentMaterialBanner();
+                      onPressed: () {
+                        ScaffoldMessenger.of(context)
+                            .hideCurrentMaterialBanner();
                       },
                       child: const Text('DISMISS'),
                     ),
@@ -61,21 +61,24 @@ class AppBarExample extends StatelessWidget {
             icon: const Icon(Icons.navigate_next),
             tooltip: 'Go to the next page',
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute<void>(
-                builder: (BuildContext context) {
-                  return Scaffold(
-                    appBar: AppBar(
-                      title: const Text('Next page'),
-                    ),
-                    body: const Center(
-                      child: Text(
-                        'This is the next page',
-                        style: TextStyle(fontSize: 24),
+              Navigator.push(
+                context,
+                MaterialPageRoute<void>(
+                  builder: (BuildContext context) {
+                    return Scaffold(
+                      appBar: AppBar(
+                        title: const Text('Next page'),
                       ),
-                    ),
-                  );
-                },
-              ));
+                      body: const Center(
+                        child: Text(
+                          'This is the next page',
+                          style: TextStyle(fontSize: 24),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              );
             },
           ),
         ],
