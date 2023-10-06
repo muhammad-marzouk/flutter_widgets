@@ -30,6 +30,7 @@ class SnackBarExample extends StatelessWidget {
             ),
           ),
         ),
+
         DataTable(
           columns: const [
             DataColumn(
