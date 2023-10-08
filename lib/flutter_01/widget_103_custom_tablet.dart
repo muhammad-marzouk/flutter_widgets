@@ -86,7 +86,7 @@ class CustomTableExample extends StatelessWidget {
                         decoration: BoxDecoration(
                           border: Border(
                             right: BorderSide(
-                              width: 2.0,
+                              width: 1.0,
                               color: borderSideColor,
                             ),
                           ),

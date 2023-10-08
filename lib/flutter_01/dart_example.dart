@@ -11,7 +11,6 @@ void main(){
   ];
   print(stringList.length);
   print(' ==> ${stringList[_index%stringList.length]}');
-
   print(_index%stringList.length);
 }
 
