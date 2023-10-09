@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class DrawerExample extends StatefulWidget {
@@ -9,13 +8,12 @@ class DrawerExample extends StatefulWidget {
 }
 
 class _DrawerExampleState extends State<DrawerExample> {
-
-static const List<Widget> _pagesList = <Widget> [
-  Icon(Icons.home),
-  Icon(Icons.notification_add),
-  Icon(Icons.add),
-  Icon(Icons.settings),
-];
+  static const List<Widget> _pagesList = <Widget>[
+    Icon(Icons.home),
+    Icon(Icons.notification_add),
+    Icon(Icons.add),
+    Icon(Icons.settings),
+  ];
   int navIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -40,17 +38,13 @@ static const List<Widget> _pagesList = <Widget> [
           decorationStyle: TextDecorationStyle.dashed,
           fontSize: 20.0,
         ),
-        selectedIconTheme: IconThemeData(
+        selectedIconTheme: const IconThemeData(
           color: Colors.deepPurple,
         ),
         selectedItemColor: Colors.deepOrange,
         unselectedItemColor: Colors.grey,
-        unselectedIconTheme: IconThemeData(
-          color: Colors.grey
-        ),
-        unselectedLabelStyle: TextStyle(
-          color: Colors.grey
-        ),
+        unselectedIconTheme: IconThemeData(color: Colors.grey),
+        unselectedLabelStyle: TextStyle(color: Colors.grey),
         showSelectedLabels: true,
         showUnselectedLabels: true,
         onTap: (int index) {
@@ -58,7 +52,7 @@ static const List<Widget> _pagesList = <Widget> [
             navIndex = index;
           });
         },
-        items:  const <BottomNavigationBarItem>[
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'home',
@@ -66,7 +60,6 @@ static const List<Widget> _pagesList = <Widget> [
           BottomNavigationBarItem(
             icon: Icon(Icons.notification_add),
             label: 'notification_add',
-
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add),
@@ -78,11 +71,28 @@ static const List<Widget> _pagesList = <Widget> [
           ),
         ],
       ),
+      floatingActionButton: BottomAppBar(
+        shape: const AutomaticNotchedShape(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(25),
+            ),
+          ),
+          //Codes=
+        ),
+        child: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.add,
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       drawer: Drawer(
         shape: const OutlineInputBorder(
           borderRadius: BorderRadius.only(
-            topRight:Radius.circular(20.0),
-            bottomRight:Radius.circular(20.0),
+            topRight: Radius.circular(20.0),
+            bottomRight: Radius.circular(20.0),
           ),
         ),
         elevation: 20.0,
@@ -112,8 +122,11 @@ static const List<Widget> _pagesList = <Widget> [
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home,color: Colors.white),
-              title: Text('Home',style: TextStyle(color: Colors.white),),
+              leading: Icon(Icons.home, color: Colors.white),
+              title: Text(
+                'Home',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             Divider(
               height: 1.0,
@@ -122,8 +135,11 @@ static const List<Widget> _pagesList = <Widget> [
               color: Colors.white,
             ),
             ListTile(
-              leading: Icon(Icons.contact_mail,color: Colors.white),
-              title: Text('Contact Use',style: TextStyle(color: Colors.white),),
+              leading: Icon(Icons.contact_mail, color: Colors.white),
+              title: Text(
+                'Contact Use',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             Divider(
               height: 1.0,
@@ -132,8 +148,11 @@ static const List<Widget> _pagesList = <Widget> [
               color: Colors.white,
             ),
             ListTile(
-              leading: Icon(Icons.search,color: Colors.white),
-              title: Text('Search',style: TextStyle(color: Colors.white),),
+              leading: Icon(Icons.search, color: Colors.white),
+              title: Text(
+                'Search',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             Divider(
               height: 1.0,
@@ -142,8 +161,11 @@ static const List<Widget> _pagesList = <Widget> [
               color: Colors.white,
             ),
             ListTile(
-              leading: Icon(Icons.settings,color: Colors.white),
-              title: Text('Settings',style: TextStyle(color: Colors.white),),
+              leading: Icon(Icons.settings, color: Colors.white),
+              title: Text(
+                'Settings',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ],
         ),

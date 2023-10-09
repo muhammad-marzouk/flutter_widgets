@@ -86,7 +86,6 @@ class _DrawerExample2State extends State<DrawerExample2> {
           Icons.add,
           color: Colors.white,
         ),
-
               ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       drawer: Drawer(
