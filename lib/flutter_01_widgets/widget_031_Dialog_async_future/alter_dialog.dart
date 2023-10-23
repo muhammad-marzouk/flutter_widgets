@@ -78,7 +78,22 @@ class AlterDialogExample extends StatelessWidget {
       context: context,
       builder: (BuildContext context) => SimpleDialog(
         title: const Text('Alert'),
-        children: [],
+        children: [
+          SimpleDialogOption(
+            onPressed: (){
+              Navigator.of(context).pop();
+            },
+            child: const Text('exit'),
+
+          ),
+          SimpleDialogOption(
+            onPressed: (){
+              Navigator.of(context).pop();
+            },
+            child: const Text('muhammad'),
+
+          ),
+        ],
       ),
     );
   }
