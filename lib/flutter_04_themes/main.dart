@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/flutter_04_themes/shared_preferences.dart';
 
-import 'second_page.dart';
+import 'my_home.dart';
 
 
 void main() {
@@ -20,53 +21,16 @@ class MyApp extends StatelessWidget {
              debugShowCheckedModeBanner: false,
              theme: ThemeData(primarySwatch: Colors.blue, ),
              darkTheme: ThemeData.dark(),
-             themeMode: currentMode,
+             themeMode: MyTheme.myTheme.getData(),
              home: MyHomePage(),
            );
-         });
-
-  }
-}
-
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-      actions: [
-        IconButton(
-            onPressed: (){
-                      MyApp.themeNotifier.value =
-                      MyApp.themeNotifier.value == ThemeMode.light
-                      ? ThemeMode.dark
-                      : ThemeMode.light;
-                       },
-            icon: Icon(MyApp.themeNotifier.value == ThemeMode.light
-            ?Icons.dark_mode
-            :Icons.light_mode )
-            )
-      ],
-        title: Text('themes'),
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            const  SizedBox(height: 30.0,),
-            const Text('Muhammed Essa'),
-            const  SizedBox(height: 30.0,),
-            ElevatedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondPage()));
-                },
-                child: const Text('Muhammed Essa'),
-            )
-          ],
-        ),
-       ),
+         },
      );
+
   }
 }
+
+
 
 
 
