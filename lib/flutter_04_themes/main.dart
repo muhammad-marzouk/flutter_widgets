@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/flutter_04_themes/shared_preferences.dart';
+
 
 import 'my_home.dart';
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
              debugShowCheckedModeBanner: false,
              theme: ThemeData(primarySwatch: Colors.blue, ),
              darkTheme: ThemeData.dark(),
-             themeMode: MyTheme.myTheme.getData(),
+             themeMode: currentMode,
              home: MyHomePage(),
            );
          },
