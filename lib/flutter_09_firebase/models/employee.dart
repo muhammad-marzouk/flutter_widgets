@@ -1,8 +1,8 @@
 class Employee {
   String? uid;
-  String? employeename;
+  String? employeeName;
   String? position;
-  String? contactno;
+  String? contactNo;
 
-  Employee({this.uid, this.employeename, this.position, this.contactno});
+  Employee({this.uid, this.employeeName, this.position, this.contactNo});
 }

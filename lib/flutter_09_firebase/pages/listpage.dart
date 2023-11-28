@@ -69,9 +69,9 @@ class _ListPageState extends State<ListPage> {
                                     MaterialPageRoute(builder: (context)=>
                                         EditPage(employee: Employee(
                                           uid: e.id,
-                                          employeename: e['employee_name'],
+                                          employeeName: e['employee_name'],
                                           position: e['position'],
-                                          contactno: e['contact_no']
+                                          contactNo: e['contact_no']
                                         ),))
                                     , (route) => false);
                               },

@@ -27,9 +27,9 @@ class _EditPageState extends State<EditPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-     _employee_name.value = TextEditingValue(text:widget.employee!.employeename.toString() );
+     _employee_name.value = TextEditingValue(text:widget.employee!.employeeName.toString() );
       _employee_position.value = TextEditingValue(text:widget.employee!.position.toString());
-      _employee_contact.value = TextEditingValue(text:widget.employee!.contactno.toString());
+      _employee_contact.value = TextEditingValue(text:widget.employee!.contactNo.toString());
       _docid.value = TextEditingValue(text:widget.employee!.uid.toString());
   }
 
