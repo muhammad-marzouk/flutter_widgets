@@ -43,7 +43,9 @@ dependencies:
   provider: ^6.1.1
   shared_preferences: ^2.2.2
   bloc: ^8.1.2
-  sqflite: ^2.3.0
+  sqflite: 2.3.0
+  firebase_core: ^2.23.0
+  cloud_firestore: ^4.13.2
 
 dev_dependencies:
   flutter_test:
